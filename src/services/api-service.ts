@@ -1,10 +1,10 @@
 import api from './api'
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGVuQGZhY2Vib29rLmNvbSIsImlhdCI6MTYxNTQ3Njc1NCwiZXhwIjoxNjE1NDgwMzU0LCJzdWIiOiIxIn0.tAAewv3IuDWT94918fCZc-wNcULndo6ZsTbVvQEo11A'
+// const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGVuQGZhY2Vib29rLmNvbSIsImlhdCI6MTYxNTQ3Njc1NCwiZXhwIjoxNjE1NDgwMzU0LCJzdWIiOiIxIn0.tAAewv3IuDWT94918fCZc-wNcULndo6ZsTbVvQEo11A'
     
-const headers = {
-    'Authorization' : `Bearer ${token}`
-}
+// const headers = {
+//     'Authorization' : `Bearer ${token}`
+// }
 
 const service = {
     postSignIn: (signIn: any) => api.post('/login', {
@@ -15,7 +15,12 @@ const service = {
     postSignInWithId: (id: number) => api.get(`/users/${id}`),
 
     
-    getProducts: () => api.get(`beers`, {headers: headers}),
+    getProducts: (token: any) => api.get(`beers`,
+    {headers: {
+        'Authorization' : `Bearer ${token}`
+    }}),
+
+    // getProducts: (token: any) => console.log('from service', token)
 }
 
 export default service

@@ -18,13 +18,15 @@ const reducerSignIn = (state = INITIAL_LOG_STATE, action: any) => {
                 ...state
             }
         case SignInEnumTypes.POST_SIGNIN_SUCCESS:
+            // console.log('from reduce', action.payload)
             return {
-                // email: action.payload,
-                // name: action.payload
                 ...state,
-                name: action.payload.name,
-                email: action.payload.email,
-                role: action.payload.role
+                users: {
+                    name: action.payload.name,
+                    email: action.payload.email,
+                    role: action.payload.role
+                }
+                
             }
         case SignInEnumTypes.POST_SIGNIN_FAILURE:
             return {

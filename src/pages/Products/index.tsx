@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import AllProducts from '../../components/AllProducts';
 import SideBar from '../../components/SideBar';
 import { loadGetProductsRequest } from '../../store/ducks/products/actions';
 
@@ -9,15 +10,17 @@ const Products = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(loadGetProductsRequest('fake header'))
+    const tokenStorage = localStorage.getItem('token')
+
+    if (tokenStorage) {
+      dispatch(loadGetProductsRequest(tokenStorage))
+    }
   }, [])
-
-
 
   return (
     <>
       <SideBar />
-      <h1>hi from products</h1>
+      <AllProducts />
     </>
   )
 }

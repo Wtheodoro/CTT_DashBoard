@@ -24,6 +24,7 @@ const LoginBox = () => {
       password: inputPassword.current?.value
     }
     dispatch(loadSignInRequest(user))
+    setHasPermission(true)
   }
 
   return (
