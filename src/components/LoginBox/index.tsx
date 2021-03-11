@@ -1,3 +1,4 @@
+import { sign } from 'crypto';
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
@@ -29,10 +30,13 @@ const LoginBox = () => {
 
   return (
       <Container>
-         <h1>Hi from login box</h1>
-         <input type="text" ref={inputEmail}/>
-         <input type="password" ref={inputPassword}/>
-         <button onClick={signIn}>Logar</button>
+        <form onSubmit={signIn}>
+        <h1>Login</h1>
+         <input type="email" placeholder="E-mail" ref={inputEmail}/>
+         <input type="password" placeholder="Senha" ref={inputPassword}/>
+         <button type="submit">Logar</button>
+        </form>
+         
          {
            hasPermission &&
            <Redirect to="/home" />
