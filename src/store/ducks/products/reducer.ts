@@ -16,13 +16,30 @@ const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
         case ProductsEnumTypes.GET_PRODUCTS_SUCCESS:
             return {
                 ...state,
-                arrayProducts: action.payload,
+                products: action.payload,
                 loading: false
             }
         case ProductsEnumTypes.GET_PRODUCTS_FAILURE:
             return {
                 ...state,
-                errorMessage: 'Erro from Reducer PRoducts',
+                errorMessage: 'Erro on GET from Reducer Products',
+                loading: false
+            }
+        case ProductsEnumTypes.POST_PRODUCTS_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+        case ProductsEnumTypes.POST_PRODUCTS_SUCCESS:
+            return {
+                // por enquanto isso não se altera
+                ...state,
+                loading: false
+            }
+        case ProductsEnumTypes.POST_PRODUCTS_FAILURE:
+            return {
+                ...state,
+                errorMessage: "Erro on POST from Reducer Products",
                 loading: false
             }
         default:

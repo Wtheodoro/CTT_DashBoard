@@ -7,12 +7,13 @@ import { Container } from './styles';
 
 const LoginBox = () => {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
+  const [render, setRender] = useState<boolean>(false)
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token) {
       setHasPermission(true)
     }
-  }, [])
+  }, [render])
 
 
   const dispatch = useDispatch()
@@ -25,18 +26,16 @@ const LoginBox = () => {
       password: inputPassword.current?.value
     }
     dispatch(loadSignInRequest(user))
-    setHasPermission(true)
+    // setHasPermission(true)
+    setRender(!render)
   }
 
   return (
       <Container>
-        <form onSubmit={signIn}>
         <h1>Login</h1>
          <input type="email" placeholder="E-mail" ref={inputEmail}/>
          <input type="password" placeholder="Senha" ref={inputPassword}/>
-         <button type="submit">Logar</button>
-        </form>
-         
+         <button onClick={signIn}>Logar</button>         
          {
            hasPermission &&
            <Redirect to="/home" />

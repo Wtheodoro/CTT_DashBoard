@@ -13,3 +13,12 @@ export function* getProducts(token: any) {
         yield put(loadGetProductsFailure())
     }
 }
+
+export function* postProducts(token: any, item: any) {
+    try {
+        const response: any = yield call(service.postProducts, token.payload, item.payload)
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -15,12 +15,15 @@ const service = {
     postSignInWithId: (id: number) => api.get(`/users/${id}`),
 
     
-    getProducts: (token: any) => api.get(`beers`,
+    getProducts: (token: any) => api.get('/beers',
     {headers: {
         'Authorization' : `Bearer ${token}`
     }}),
 
-    // getProducts: (token: any) => console.log('from service', token)
+    postProducts: (token: any, item: any) => api.post('/beers', item, {
+    headers: {
+            'Authorization' : `Bearer ${token}`
+    }})
 }
 
 export default service
