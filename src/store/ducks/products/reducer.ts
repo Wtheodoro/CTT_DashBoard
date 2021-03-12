@@ -42,6 +42,23 @@ const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
                 errorMessage: "Erro on POST from Reducer Products",
                 loading: false
             }
+        case ProductsEnumTypes.DELETE_PRODUCTS_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+        case ProductsEnumTypes.DELETE_PRODUCTS_SUCCESS:
+            return {
+                // por enquanto isso não se altera
+                ...state,
+                loading: false
+            }
+        case ProductsEnumTypes.DELETE_PRODUCTS_FAILURE:
+            return {
+                ...state,
+                errorMessage: "Erro on DELETE from Reducer Products",
+                loading: false
+            }
         default:
             return state
 

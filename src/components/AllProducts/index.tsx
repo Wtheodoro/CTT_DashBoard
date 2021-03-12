@@ -16,7 +16,7 @@ const products: ProductType[] = useSelector((state: AllTypesReducer) =>state.red
       {
         products.map((i: ProductType) => (
           <>
-            <ProductTrack item={i}/>
+            <ProductTrack item={i} key={i.id}/>
           </>
         ))
       }

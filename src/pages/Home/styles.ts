@@ -7,6 +7,10 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    .content {
+        z-index: 10;
+    }
+
     .hills {
         position: absolute;
         bottom: 0;

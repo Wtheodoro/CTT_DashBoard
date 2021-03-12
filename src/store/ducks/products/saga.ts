@@ -1,8 +1,9 @@
 import { put, call } from 'redux-saga/effects'
-import { loadGetProductsSuccess, loadGetProductsFailure } from './actions'
+import { loadGetProductsSuccess, loadGetProductsFailure, loadPostProductsFailure, loadDeleteProductFailuer, loadDeleteProductSuccess } from './actions'
 import service from '../../../services/api-service'
-import  { ProductsData } from './types'
+import  { ProductData, ProductsData } from './types'
 
+// GET
 export function* getProducts(token: any) {
     try {
         const response: ProductsData = yield call(service.getProducts, token.payload)
@@ -14,11 +15,25 @@ export function* getProducts(token: any) {
     }
 }
 
-export function* postProducts(token: any, item: any) {
+// POST
+export function* postProducts(headerItem: any) {
     try {
-        const response: any = yield call(service.postProducts, token.payload, item.payload)
+        const response: ProductData = yield call(service.postProducts, headerItem.payload.token, headerItem.payload.item)
         console.log(response)
     } catch (error) {
         console.log(error)
+        yield put(loadPostProductsFailure())
+    }
+}
+
+// DELETE
+export function* deleteProducts(headerId: any) {
+    try {
+        yield call(service.deleteProduct, headerId.payload.token, headerId.payload.id)
+
+        yield put(loadDeleteProductSuccess())
+    } catch (error) {
+        console.log(error)
+        yield put(loadDeleteProductFailuer())
     }
 }

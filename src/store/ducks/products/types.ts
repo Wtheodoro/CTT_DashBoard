@@ -19,7 +19,7 @@ export interface ProductsInitialState {
 }
 
 export interface ProductType {
-    id: number
+    id?: number
     title: string
     price: string
     description: string
@@ -28,4 +28,8 @@ export interface ProductType {
 
 export interface ProductsData {
     data: ProductType[]
+}
+
+export interface ProductData {
+    data: ProductsData
 }
