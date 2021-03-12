@@ -1,4 +1,5 @@
-import { ProductsEnumTypes, ProductsInitialState } from './types'
+import Products from '../../../pages/Products'
+import { ProductsEnumTypes, ProductsInitialState, ProductType } from './types'
 
 const INITIAL_PRODUCTS_STATE: ProductsInitialState ={
     errorMessage: "",
@@ -7,6 +8,7 @@ const INITIAL_PRODUCTS_STATE: ProductsInitialState ={
 }
 
 const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
+    console.log(action.payload)
     switch(action.type) {
         case ProductsEnumTypes.GET_PRODUCTS_REQUEST:
             return {
@@ -32,9 +34,9 @@ const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
             }
         case ProductsEnumTypes.POST_PRODUCTS_SUCCESS:
             return {
-                // por enquanto isso não se altera
                 ...state,
-                loading: false
+                loading: false,
+                products: [...state.products, action.payload]
             }
         case ProductsEnumTypes.POST_PRODUCTS_FAILURE:
             return {
@@ -48,10 +50,12 @@ const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
                 loading: true
             }
         case ProductsEnumTypes.DELETE_PRODUCTS_SUCCESS:
+            const indexOfItem = state.products.findIndex((element: ProductType) => element.id === action.payload)
+            state.products.splice(indexOfItem, 1)
             return {
-                // por enquanto isso não se altera
                 ...state,
-                loading: false
+                loading: false,
+                products: [...state.products]
             }
         case ProductsEnumTypes.DELETE_PRODUCTS_FAILURE:
             return {

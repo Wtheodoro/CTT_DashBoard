@@ -8,13 +8,18 @@ import { Container } from './styles';
 
 const AllProducts = () => {
 
-const products: ProductType[] = useSelector((state: AllTypesReducer) =>state.reducerProducts.products)
+const [products, setProducts] = useState<ProductType[]>()
+const productsFromReducer: ProductType[] = useSelector((state: AllTypesReducer) =>state.reducerProducts.products)
+
+useEffect(() => {
+  setProducts(productsFromReducer)
+}, [productsFromReducer])
 
   return (
     <Container>
       <h1>All  products</h1>
       {
-        products.map((i: ProductType) => (
+        products?.map((i: ProductType) => (
           <>
             <ProductTrack item={i} key={i.id}/>
           </>

@@ -1,5 +1,5 @@
 import { put, call } from 'redux-saga/effects'
-import { loadGetProductsSuccess, loadGetProductsFailure, loadPostProductsFailure, loadDeleteProductFailuer, loadDeleteProductSuccess } from './actions'
+import { loadGetProductsSuccess, loadGetProductsFailure, loadPostProductsFailure, loadDeleteProductFailuer, loadDeleteProductSuccess, loadPostProductsSuccess } from './actions'
 import service from '../../../services/api-service'
 import  { ProductData, ProductsData } from './types'
 
@@ -19,7 +19,10 @@ export function* getProducts(token: any) {
 export function* postProducts(headerItem: any) {
     try {
         const response: ProductData = yield call(service.postProducts, headerItem.payload.token, headerItem.payload.item)
-        console.log(response)
+        
+        console.log('from sagga', response.data)
+
+        yield put(loadPostProductsSuccess(response.data))
     } catch (error) {
         console.log(error)
         yield put(loadPostProductsFailure())
@@ -31,7 +34,7 @@ export function* deleteProducts(headerId: any) {
     try {
         yield call(service.deleteProduct, headerId.payload.token, headerId.payload.id)
 
-        yield put(loadDeleteProductSuccess())
+        yield put(loadDeleteProductSuccess(headerId.payload.id))
     } catch (error) {
         console.log(error)
         yield put(loadDeleteProductFailuer())

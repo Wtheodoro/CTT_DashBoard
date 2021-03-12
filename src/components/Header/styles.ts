@@ -1,20 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
-    width: 10rem;
-    background: red;
+    height: 4rem;
+    width: calc(100vw - 10rem);
+    background: blue;
     position: absolute;
-    left: 0;
+    left: 10rem;
     top: 0;
     z-index: 1;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    
-    a + a {
-        margin-top: 2rem;
+
+    p {
+        margin-right: 2rem;
     }
 `;
