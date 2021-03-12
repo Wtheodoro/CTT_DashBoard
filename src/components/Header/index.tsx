@@ -19,10 +19,8 @@ const Header = () => {
 
   return (
     <Container>
-      <div className="content">
         <p>{userName}</p>
         <p>{userRole}</p>
-      </div>
     </Container>
   );
 }

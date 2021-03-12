@@ -17,4 +17,10 @@ export const Container = styled.div`
         position: absolute;
         width: 100%;
     }
+
+    .content {
+        z-index: 10;
+        background: #FFF;
+        /* padding: 5rem; */
+    }
 `;

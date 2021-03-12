@@ -35,18 +35,16 @@ const Products = () => {
   }
 
   return (
-    <>
+    <Container>
     <SideBar />
     <Header />
-    <Container>
-      <button onClick={addItem}>Adicionar pré definido</button>
       <div className="content">
+        <button onClick={addItem}>Adicionar pré definido</button>
         <AllProducts />
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
     </Container>
-    </>
   )
 }
 
