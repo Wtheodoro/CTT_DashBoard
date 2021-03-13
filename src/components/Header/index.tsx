@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-
+import { Link } from 'react-router-dom'
 import { Container } from './styles';
 
 const Header = () => {
@@ -17,10 +17,15 @@ const Header = () => {
     }
   }, [])
 
+  const clearStorage = () => {
+    localStorage.clear()
+  }
+
   return (
     <Container>
-        <p>{userName}</p>
-        <p>{userRole}</p>
+      <p>{userName}</p>
+      <p>{userRole}</p>
+      <Link to="/" onClick={clearStorage}>Logout</Link>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { loadDeleteProductRequest } from '../../store/ducks/products/actions';
-import { ProductType } from '../../store/ducks/products/types';
+import { loadDeleteProductRequest } from '../../../store/ducks/products/actions';
+import { ProductType } from '../../../store/ducks/products/types';
 import { Container } from './styles';
 
 export interface ProductTrackProps {
@@ -11,8 +11,8 @@ export interface ProductTrackProps {
 const ProductTrack = (props: ProductTrackProps) => {
 
   const { image, price, title, id } = props.item
-
   const dispatch = useDispatch()
+  const userRole = localStorage.getItem('userRole')
 
   const deleteItem = (id?: number) => {
     console.log('função deleter acionada', id)
@@ -27,11 +27,16 @@ const ProductTrack = (props: ProductTrackProps) => {
 
   return (
     <Container>
-      <p>{id}</p>
-      <img src={image} alt={title}/>
-      <p>{title}</p>
-      <p>{price}</p>
-      <button onClick={()=>deleteItem(id)}>X</button>
+      <div className="track">
+        <p className="id">{id}</p>
+        <img src={image} alt={title}/>
+        <p className="title">{title}</p>
+        <p className="price">{price}</p>
+        {
+          userRole === 'admin' &&
+          <button onClick={()=>deleteItem(id)}>X</button>
+        }
+      </div>
     </Container>
   );
 }

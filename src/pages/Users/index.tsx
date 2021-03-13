@@ -1,5 +1,4 @@
 import React from 'react';
-import Scenery from '../../components/Scenery';
 import SideBar from '../../components/SideBar';
 
 import { Container } from './styles';

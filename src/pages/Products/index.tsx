@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import AllProducts from '../../components/AllProducts';
+import AllProducts from '../../components/ProductsSet/AllProducts';
 import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
 import { loadGetProductsRequest, loadPostProductsRequest } from '../../store/ducks/products/actions';
@@ -36,11 +36,15 @@ const Products = () => {
 
   return (
     <Container>
-    <SideBar />
-    <Header />
-      <div className="content">
-        <button onClick={addItem}>Adicionar pré definido</button>
-        <AllProducts />
+      <div className="flex-all">
+        <Header />
+        <div className="flex">
+          <SideBar />
+            <div className="content">
+              <button onClick={addItem}>Adicionar pré definido</button>
+              <AllProducts />
+            </div>
+        </div>
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
