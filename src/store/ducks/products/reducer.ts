@@ -1,14 +1,12 @@
-import Products from '../../../pages/Products'
 import { ProductsEnumTypes, ProductsInitialState, ProductType } from './types'
 
-const INITIAL_PRODUCTS_STATE: ProductsInitialState ={
+const INITIAL_PRODUCTS_STATE: ProductsInitialState = {
     errorMessage: "",
     loading: false,
     products: []
 }
 
 const reducerProducts = (state = INITIAL_PRODUCTS_STATE, action: any) => {
-    console.log(action.payload)
     switch(action.type) {
         case ProductsEnumTypes.GET_PRODUCTS_REQUEST:
             return {

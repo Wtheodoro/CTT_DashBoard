@@ -15,8 +15,6 @@ const ProductTrack = (props: ProductTrackProps) => {
   const userRole = localStorage.getItem('userRole')
 
   const deleteItem = (id?: number) => {
-    console.log('função deleter acionada', id)
-
     const headerId = {
       token: localStorage.getItem('token'),
       id: id

@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
+import AllUsers from '../../components/UserSet/AllUsers';
+import { loadGetUsersRequest } from '../../store/ducks/users/actions';
 
 import { Container } from './styles';
 
 const Users = () => {
+  const dispatch = useDispatch()
+  const tokenStorage = localStorage.getItem('token')
+
+  useEffect(() => {
+    if (tokenStorage) {
+      dispatch(loadGetUsersRequest(tokenStorage))
+    }
+  }, [])
   return (
     <Container>
-      <SideBar/>
-      <div className="content">
-        <h1>hi from users</h1>
+      <div className="flex-all">
+        <Header />
+        <div className="flex">
+          <SideBar />
+          <div className="content">
+            <AllUsers />
+          </div>
+        </div>
       </div>
-        <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
-        <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+      <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
+      <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
     </Container>
   );
 }
