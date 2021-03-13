@@ -1,6 +1,6 @@
 import { put, call } from 'redux-saga/effects'
 import loginService from '../../../services/login-service'
-import { loadSignInSuccess, loadSignInFailure } from './actions'
+import { loadSignInFailure } from './actions'
 import { Data, DataWithId, LoggedUserData } from './types'
 import { decodeToken } from 'react-jwt'
 

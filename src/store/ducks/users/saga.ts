@@ -4,13 +4,13 @@ import { loadGetUsersSuccess, loadGetUsersFailure,
     loadDeleteUserSuccess, loadDeleteUserFailure 
 } from './actions'
 import userService from '../../../services/user-service'
-import { UserData, UsersData } from './types'
+import { UserData, UsersData, userTokenDecrypted, UserType } from './types'
+import { decodeToken } from 'react-jwt'
 
 // GET
 export function* getUsers(token: any) {
     try {
         const response: UsersData = yield call(userService.getUsers, token.payload)
-        // até aqui chega
         yield put(loadGetUsersSuccess(response.data))
     } catch (error) {
         console.log(error)
@@ -22,7 +22,19 @@ export function* getUsers(token: any) {
 export function* postUsers(headerUser: any) {
     try {
         const response: UserData = yield call(userService.postUser,headerUser.payload.token ,headerUser.payload.user)
-        yield put(loadPostUserSuccess(response.data))
+        const decryptedResponse: userTokenDecrypted = yield decodeToken(response.data.accessToken)
+        console.log(decryptedResponse)
+
+        const user: UserType = {
+            id: decryptedResponse.sub,
+            role: headerUser.payload.user.role,
+            name: headerUser.payload.user.name,
+            email: decryptedResponse.email,
+            password: headerUser.payload.user.password
+        }
+
+        yield put(loadPostUserSuccess(user))
+
     } catch (error) {
         console.log(error)
         yield put(loadPostUserFailure())

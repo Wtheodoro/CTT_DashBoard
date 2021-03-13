@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ButtonLink from '../../components/ButtonLink';
 import Instructions from '../../components/Instructions';
 
+
 import { Container } from './styles';
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
           <ButtonLink linkTo='/users'>Usuários</ButtonLink>
         }
         <ButtonLink linkTo='/products'>Produtos</ButtonLink>
+        <ButtonLink linkTo='/statistics'>estatisticas</ButtonLink>
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>

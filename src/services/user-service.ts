@@ -6,7 +6,7 @@ const userService = {
         'Authorization' : `Bearer ${token}`
     }}),
 
-    postUser: (token: any, item: any) => api.post('/users', item, {
+    postUser: (token: any, item: any) => api.post('/register', item, {
     headers: {
             'Authorization' : `Bearer ${token}`
     }}),

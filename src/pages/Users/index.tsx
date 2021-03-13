@@ -8,6 +8,7 @@ import { loadGetUsersRequest } from '../../store/ducks/users/actions';
 import { Container } from './styles';
 
 const Users = () => {
+
   const dispatch = useDispatch()
   const tokenStorage = localStorage.getItem('token')
 
@@ -16,6 +17,7 @@ const Users = () => {
       dispatch(loadGetUsersRequest(tokenStorage))
     }
   }, [])
+  
   return (
     <Container>
       <div className="flex-all">

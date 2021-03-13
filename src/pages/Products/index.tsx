@@ -31,7 +31,6 @@ const Products = () => {
     }
 
     dispatch(loadPostProductsRequest(headerItem))
-    console.log('função addItem acionada')
   }
 
   return (

@@ -31,5 +31,23 @@ export interface UsersData {
 }
 
 export interface UserData {
-    data: UserType
+    data: Data
+}
+
+export interface Data {
+    accessToken: string
+}
+
+export interface HeaderUserType {
+    payload: HeaderUserPayload
+}
+
+export interface HeaderUserPayload {
+    token: string
+    user: UserType
+}
+
+export interface userTokenDecrypted {
+    email: string
+    sub: number
 }
