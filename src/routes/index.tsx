@@ -4,7 +4,6 @@ import Login from '../pages/Login'
 import Home from '../pages/Home'
 import Users from '../pages/Users'
 import Products from '../pages/Products'
-import PAGINAPARATESTARCOMPONENTES from '../pages/PAGINAPARATESTARCOMPONENTES';
 import Statistics from '../pages/Statistics';
 
 const Routes  = () => {

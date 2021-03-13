@@ -24,13 +24,11 @@ export const Container = styled.div`
         position: absolute;
         bottom: 0;
         width: 100%;
-        /* z-index: -10; */
     }
 
     .starts {
         position: absolute;
         top: 0;
         width: 100%;
-        /* z-index: -10; */
     }
 `;

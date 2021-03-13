@@ -1,9 +1,10 @@
 import { Reducer } from 'redux'
-import { SignInEnumTypes, LoggedUser, LogInitialState } from './types'
+import { SignInEnumTypes, LogInitialState } from './types'
 
 const INITIAL_LOG_STATE: LogInitialState = {
     errorMessage: "",
     loading: false,
+    token: '',
     users: {
         name: '',
         email: '',
@@ -18,14 +19,9 @@ const reducerSignIn = (state = INITIAL_LOG_STATE, action: any) => {
                 ...state
             }
         case SignInEnumTypes.POST_SIGNIN_SUCCESS:
-            // console.log('from reduce', action.payload)
             return {
                 ...state,
-                users: {
-                    name: action.payload.name,
-                    email: action.payload.email,
-                    role: action.payload.role
-                }
+                token: action.payload
                 
             }
         case SignInEnumTypes.POST_SIGNIN_FAILURE:

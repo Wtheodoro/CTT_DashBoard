@@ -14,6 +14,7 @@ const SideBar  = () => {
        <Link to="/users">Usuários</Link>
      }
      <Link to="/products">Produtos</Link>
+     <Link to="/statistics">Estatística</Link>
     </Container>
   )
 }

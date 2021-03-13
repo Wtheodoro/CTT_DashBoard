@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import ButtonLink from '../../components/ButtonLink';
 import Instructions from '../../components/Instructions';
 
@@ -8,6 +9,8 @@ import { Container } from './styles';
 const Home = () => {
   const [userName, setUserName] = useState<string>()
   const [userRole, setUserRole] = useState<string>()
+
+  const token = localStorage.getItem('token')
 
   useEffect(() => {
     const userNameStorage = localStorage.getItem('userName')
@@ -32,6 +35,10 @@ const Home = () => {
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+      {
+        !token &&
+        <Redirect to="/"/>
+      }
     </Container>
   )
 }

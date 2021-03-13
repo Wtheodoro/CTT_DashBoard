@@ -6,6 +6,7 @@ export const Container = styled.div`
     margin: 1rem 2rem;
     background: rgb(44, 44, 68);
     border-radius: 15px;
+    box-shadow: 0 10px 6px 0 rgb(26, 26, 36);
 
     .content {
         max-height: 61vh;

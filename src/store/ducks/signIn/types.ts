@@ -8,6 +8,7 @@ export interface LogInitialState {
     errorMessage: string
     loading: boolean
     users: LoggedUser
+    token: string
 }
 
 export interface SignIn {
