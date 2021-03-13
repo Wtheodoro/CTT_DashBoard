@@ -28,7 +28,6 @@ const ProductTrack = (props: ProductTrackProps) => {
   return (
     <Container>
       <div className="track">
-        <p className="id">{id}</p>
         <img src={image} alt={title}/>
         <p className="title">{title}</p>
         <p className="price">{price}</p>

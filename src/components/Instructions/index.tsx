@@ -12,7 +12,7 @@ const Instructions = (props: InstructionsProps) => {
 
   return (
     <Container>
-      <h1>Olá {name},</h1>
+      <h1>Olá <strong>{name}</strong>,</h1>
         <p>Reparamos que você é ume cliente do tipo <strong>{role}</strong>, muito legal não é?</p>
         {
           role === 'admin' &&

@@ -6,4 +6,8 @@ export const Container = styled.div`
     p {
         margin-top: 1rem;
     }
+
+    strong {
+        color: #F5679B;
+    }
 `;
