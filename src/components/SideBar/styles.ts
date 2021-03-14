@@ -13,6 +13,13 @@ export const Container = styled.div`
     a {
         text-decoration: none;
         color: #F5679B;
+
+        transition: all 0.2s;
+
+        &:hover {
+            color: #FFF;
+            font-size: 120%;
+        }   
     }
     
     a + a {

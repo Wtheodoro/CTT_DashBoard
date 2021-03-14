@@ -35,7 +35,7 @@ const LoginBox = () => {
         <h1>Login</h1>
          <input type="email" placeholder="E-mail" ref={inputEmail}/>
          <input type="password" placeholder="Senha" ref={inputPassword}/>
-         <button onClick={signIn}>Logar</button>         
+         <button onClick={signIn}>Login</button>         
          {
            hasPermission &&
            <Redirect to="/home" />

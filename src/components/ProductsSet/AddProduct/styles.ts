@@ -47,9 +47,15 @@ export const Container = styled.div`
 
     .randomButton {
         svg {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #E2E2E2;
             cursor: pointer;
+            transition: all 0.2s;
+            margin-right: 1rem;
+
+            &:hover {
+                font-size: 3rem;
+            }
         }
     }
 `;

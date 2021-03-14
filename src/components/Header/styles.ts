@@ -18,6 +18,12 @@ export const Container = styled.div`
         text-decoration: none;
         color: #F5679B;
         margin: 0 2rem;
+        transition: all 0.2s;
+
+        &:hover {
+            color: #FFF;
+            font-size: 120%;
+        }
 
     }
 `;
