@@ -6,6 +6,7 @@ export const Container = styled.button`
     margin: 1rem;
     border: 2px solid #F5679B;
     border-radius: 50px;
+    transition: all 0.3s;
 
     &:hover {
         background: #F5679B;
