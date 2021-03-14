@@ -14,6 +14,8 @@ export const Container = styled.div`
     background: #2B2535;
     text-align: center;
     border-radius: 15px;
+    box-shadow: 0 10px 6px 0 rgb(26, 26, 36);
+
 
     h1 {
         color: #F5679B;
@@ -21,6 +23,7 @@ export const Container = styled.div`
     }
 
     input {
+        color: #FFF;
         background: transparent;
         display: block;
         margin: 1.2rem auto;

@@ -4,7 +4,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid black;
     margin-top: 1rem;
 
     .track {
@@ -12,8 +11,15 @@ export const Container = styled.div`
         display: flex;
         align-items: center;  
         position: relative;
-        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 5px;
 
+        background: linear-gradient(
+            90deg,
+            rgba(93, 12, 255, 0.5) 0%,
+            rgba(155, 0, 250, 0.5) 100%
+        );
+        
         p {
             color: #FFF;
         }
@@ -26,10 +32,13 @@ export const Container = styled.div`
             margin-left: 1rem;
         }
 
-        button {
+        svg {
             position: absolute;
             right: 0;
             margin-right: 2rem;
+            font-size: 2rem;
+            color: #E2E2E2;
+            cursor: pointer;
         }
 
         img {

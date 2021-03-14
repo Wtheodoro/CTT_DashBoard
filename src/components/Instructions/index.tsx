@@ -17,14 +17,14 @@ const Instructions = (props: InstructionsProps) => {
         {
           role === 'admin' &&
           <div>
-            <p>Isso quer dizer que você tem acesso as listas de produtos e usuários, tem o poder de cadastrar produtos e também novos usuários, contudo você também pode exclui-los.</p>
+            <p>Isso quer dizer que você tem acesso as listas de <strong>Produtos</strong> e <strong>Usuários</strong>, também nossos números em <strong>Estatísticas</strong>, tem o poder de cadastrar produtos e também novos usuários, contudo você também pode exclui-los.</p>
             <p>Você é quem decide.</p>
           </div>
         }
         {
           role === 'editor' &&
           <div>
-            <p>Isso quer dizer que você tem total acesso aos produtos e consegue inclusive adicionar produtos novos.</p>
+            <p>Isso quer dizer que você tem total acesso aos <strong>Produtos</strong> e consegue inclusive adicionar produtos novos. Além disso você pode ver alguns de nossos números em <strong>Estatísticas</strong>.</p>
           </div>
         }
         

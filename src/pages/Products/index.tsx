@@ -3,9 +3,10 @@ import { useDispatch } from 'react-redux';
 import AllProducts from '../../components/ProductsSet/AllProducts';
 import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
-import { loadGetProductsRequest, loadPostProductsRequest } from '../../store/ducks/products/actions';
+import { loadGetProductsRequest } from '../../store/ducks/products/actions';
 
 import { Container } from './styles';
+import AddProduct from '../../components/ProductsSet/AddProduct';
 
 const Products = () => {
   const dispatch = useDispatch()
@@ -17,22 +18,6 @@ const Products = () => {
     }
   }, [])
 
-  const addItem = () => {
-    const item = {
-      title: 'banana',
-	    price: '23,50',
-	    description: "testando produto novo",
-	    image: "https://exame.com/wp-content/uploads/2016/12/cachac3a7a-51-exportac3a7c3a3o-100cl.jpg?quality=70&strip=all"
-    }
-
-    const headerItem = {
-      token: tokenStorage,
-      item: item
-    }
-
-    dispatch(loadPostProductsRequest(headerItem))
-  }
-
   return (
     <Container>
       <div className="flex-all">
@@ -40,7 +25,7 @@ const Products = () => {
         <div className="flex">
           <SideBar />
             <div className="content">
-              <button onClick={addItem}>Adicionar pré definido</button>
+              <AddProduct />
               <AllProducts />
             </div>
         </div>

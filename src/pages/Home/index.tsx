@@ -31,7 +31,7 @@ const Home = () => {
           <ButtonLink linkTo='/users'>Usuários</ButtonLink>
         }
         <ButtonLink linkTo='/products'>Produtos</ButtonLink>
-        <ButtonLink linkTo='/statistics'>estatisticas</ButtonLink>
+        <ButtonLink linkTo='/statistics'>Estatísticas</ButtonLink>
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>

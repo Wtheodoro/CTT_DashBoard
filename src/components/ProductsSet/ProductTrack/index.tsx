@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { loadDeleteProductRequest } from '../../../store/ducks/products/actions';
 import { ProductType } from '../../../store/ducks/products/types';
 import { Container } from './styles';
+import { MdDeleteForever } from "react-icons/md";
+
 
 export interface ProductTrackProps {
   item: ProductType
@@ -31,7 +33,7 @@ const ProductTrack = (props: ProductTrackProps) => {
         <p className="price">{price}</p>
         {
           userRole === 'admin' &&
-          <button onClick={()=>deleteItem(id)}>X</button>
+          <MdDeleteForever onClick={()=>deleteItem(id)}/>
         }
       </div>
     </Container>
