@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Container } from './styles';
 
 interface InstructionsProps {
-  name?: string
-  role?: string
+  name?: string | null
+  role?: string | null
 }
 
 const Instructions = (props: InstructionsProps) => {

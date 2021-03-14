@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
 import AddUser from '../../components/UserSet/AddUser';
@@ -12,6 +13,7 @@ const Users = () => {
 
   const dispatch = useDispatch()
   const tokenStorage = localStorage.getItem('token')
+  const userRole = localStorage.getItem('userRole')
 
   useEffect(() => {
     if (tokenStorage) {
@@ -33,6 +35,10 @@ const Users = () => {
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+      {
+        userRole !== 'admin' &&
+        <Redirect to="/home"/>
+      }
     </Container>
   );
 }

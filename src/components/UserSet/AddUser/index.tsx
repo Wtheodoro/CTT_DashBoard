@@ -23,7 +23,7 @@ const AddUser = () => {
   return ( 
     <Container>
       <form onSubmit={handleSubmit(registerUser)}>
-        <h3>Novo colaborador</h3>
+        <p>Novo colaborador</p>
         <input name="name" type="text" placeholder="Nome" ref={register({ required:true })}/>
         <input name="email" type="email" placeholder="E-mail" ref={register({ required:true })}/>
         <input name="password" type="password" placeholder="Senha" ref={register({ required:true })}/>

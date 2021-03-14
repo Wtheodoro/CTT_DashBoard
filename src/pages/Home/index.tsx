@@ -7,20 +7,9 @@ import Instructions from '../../components/Instructions';
 import { Container } from './styles';
 
 const Home = () => {
-  const [userName, setUserName] = useState<string>()
-  const [userRole, setUserRole] = useState<string>()
-
   const token = localStorage.getItem('token')
-
-  useEffect(() => {
-    const userNameStorage = localStorage.getItem('userName')
-    const userRoleStorage = localStorage.getItem('userRole')
-
-    if (userNameStorage && userRoleStorage) {
-      setUserName(userNameStorage)
-      setUserRole(userRoleStorage)
-    }
-  }, [])
+  const userName = localStorage.getItem('userName')
+  const userRole = localStorage.getItem('userRole')
   
   return (
     <Container>
