@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
+import AddUser from '../../components/UserSet/AddUser';
 import AllUsers from '../../components/UserSet/AllUsers';
 import { loadGetUsersRequest } from '../../store/ducks/users/actions';
 
@@ -25,6 +26,7 @@ const Users = () => {
         <div className="flex">
           <SideBar />
           <div className="content">
+            <AddUser />
             <AllUsers />
           </div>
         </div>

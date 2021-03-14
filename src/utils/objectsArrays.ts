@@ -48,4 +48,103 @@ export const productsArray = [
           image: "https://naturalone.vteximg.com.br/arquivos/ids/155646/15L-Uva-Ambiente.png?v=637288815647700000"
     },
     
-  ]
+]
+
+export const usersArray = [
+  {
+    name: "Marie Curie",
+    email: "curie.marie@nobel.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Ada Lovelave",
+    email: "lovelace.ada@code.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Rosalind Franklin",
+    email: "franklin.rosalind@dna.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Indira Gandhi",
+    email: "gandhi.indira@india.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Margaret Hamilton",
+    email: "hamilton.margaret@nasa.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Virginia Hall",
+    email: "hall.virginia@spy.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Harriet Tubman",
+    email: "tubman.harriet@freedom.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Madre Teresa",
+    email: "teresa.madre@peace.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Rosa Parks",
+    email: "parks.rosa@blacklivemetters.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Louis Pasteur",
+    email: "pasteur.louis@bio.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Martin Luther King Jr.",
+    email: "luther.king@peacenjustice.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Albert Einstein",
+    email: "einstein.albert@emc2.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Karl Marx",
+    email: "Marx.Karl@politicalreform.com",
+    password: "randomuser",
+    role: "admin"
+  },
+  {
+    name: "Gautama Buddha",
+    email: "buddha.gautama@zen.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Kwame Nkrumah",
+    email: "nkrumah.kwame@africanliberation.com",
+    password: "randomuser",
+    role: "editor"
+  },
+  {
+    name: "Jesus de Nazaré",
+    email: "cristo.jesus@god.com",
+    password: "randomuser",
+    role: "admin"
+  },
+]

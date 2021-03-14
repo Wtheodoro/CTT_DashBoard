@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux';
 import { loadPostUserRequest } from '../../../store/ducks/users/actions';
+import AddPredefinedUser from '../AddPredefinedUser';
 
 import { Container } from './styles';
 
@@ -28,12 +29,20 @@ const AddUser = () => {
         <input name="password" type="password" placeholder="Senha" ref={register({ required:true })}/>
         <input name="rePassword" type="password" placeholder="Confirme a senha" ref={register({ required:true })}/>
 
-        <label>Tipo do registro</label>
-        <input type="radio" name="role" ref={register} value="editor" checked/>
-        <input type="radio" name="role" ref={register} value="admin"/>
+        <label>
+          Editor
+          <input type="radio" name="role" ref={register} value="editor" checked/>
+        </label>
+        <label>
+          Admin
+          <input type="radio" name="role" ref={register} value="admin"/>
+        </label>
 
         <button>Enviar</button>
       </form>
+      <div className="randomButton">
+        <AddPredefinedUser />
+      </div>
     </Container>
   )
 }

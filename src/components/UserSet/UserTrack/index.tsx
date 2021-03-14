@@ -12,7 +12,7 @@ export interface UserTrackProps {
 
 const UserTrack = (props: UserTrackProps) => {
 
-  const { id, role, name } = props.user
+  const { id, role, name, email } = props.user
   const dispatch = useDispatch()
   const userRole = localStorage.getItem('userRole')
 
@@ -34,6 +34,7 @@ const UserTrack = (props: UserTrackProps) => {
         <p>{id}</p>
         <p>{role}</p>
         <p>{name}</p>
+        <p>{email}</p>
         <button onClick={()=>deleteUser(id)}>X</button>
       </div>
       {
