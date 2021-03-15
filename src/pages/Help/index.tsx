@@ -1,5 +1,6 @@
 import React from 'react';
 import { GiPerspectiveDiceSixFacesRandom } from 'react-icons/gi';
+import { Redirect } from 'react-router-dom';
 import ButtonLink from '../../components/ButtonLink';
 
 import { Container } from './styles';
@@ -12,7 +13,7 @@ const Help = () => {
     <Container>
       <div className="content">
         <h1>Olá novamente <strong>{userName}</strong>,</h1>
-        <p>Construimos as coisas intuitivas por aqui, mas talvez você tenha se deparado com um ícone que te deixou com um "<strong>?</strong>" na cabeça. Mas calma, vamos te explicar ele agora e aposto que vai gostar.</p>
+        <p>Construimos as coisas intuitivas por aqui, mas talvez você tenha se deparado com um ícone que te deixou com um "<strong>?</strong>" na cabeça. Mas calma, vamos te explicar agora e aposto que vai gostar.</p>
         <GiPerspectiveDiceSixFacesRandom />
         <p>Por aqui chamamos esse ícone de <strong>Random</strong>, é uma ferramenta que ajuda você a testar a nossa plataforma. O <strong>Random</strong> fica responsável por preencher os dados necessários para adicionar um novo <strong>produto </strong>
         {
@@ -23,12 +24,17 @@ const Help = () => {
           <> de forma aleatória.</>
         }
         </p>
-        <p>Muito legal não é mesmo? Sabiamos que você iria gostar!</p>
-        <p>Agora nos response se você entendeu.</p>
+        <p>Muito legal não é mesmo? Sabiamos que iria gostar!</p>
         <ButtonLink linkTo='/home'>Entendi !</ButtonLink>
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+
+      {
+        !userName &&
+        <Redirect to="/" />
+      }
+      
     </Container>
   )
 }

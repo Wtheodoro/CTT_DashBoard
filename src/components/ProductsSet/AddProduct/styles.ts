@@ -33,11 +33,13 @@ export const Container = styled.div`
     }
 
     button {
+        color: #FFF;
         padding: 0.6rem;
         border: none;
         border-radius: 0 4px 4px 0;
         cursor: pointer;
         outline: none;
+        max-height: 2.3rem;
         background: linear-gradient(
             90deg,
             rgba(93, 12 , 255, 1) 0%,

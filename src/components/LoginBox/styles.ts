@@ -40,22 +40,27 @@ export const Container = styled.div`
             border-color: #F5679B;
         }
     }
+
     button {
-            border: 0;
-            background: none;
-            display: block;
-            margin: 1.2rem auto;
-            text-align: center;
-            border: 2px solid #2ECC71;
-            color: #FFF;
-            padding: 0.9rem 2.5rem;
-            outline: none;
-            border-radius: 24px;
-            transition: 0.25s;
+        border: 0;
+        background: none;
+        display: block;
+        margin: 1.2rem auto;
+        text-align: center;
+        border: 2px solid #2ECC71;
+        color: #FFF;
+        padding: 0.9rem 2.5rem;
+        outline: none;
+        border-radius: 24px;
+        transition: 0.25s;
         
-            &:hover {
-                background: #F5679B;
-                border: 2px solid #F5679B;
-            }
+        &:hover {
+            background: #F5679B;
+            border: 2px solid #F5679B;
         }
+    }
+
+    p {
+        color: #E2E2E2;
+    }
 `;

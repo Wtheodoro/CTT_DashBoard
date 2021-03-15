@@ -10,12 +10,17 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    form {
+        display: flex;
+    }
 
     p {
         color: #FFF;
     }
 
     input {
+        height:3rem;
         padding: 0.5rem 1.5rem 0.5rem 0.8rem;
         border-radius: 4px 0 0 4px;
         border: 2px solid #5D0CFF;
@@ -33,6 +38,9 @@ export const Container = styled.div`
     }
 
     label {
+        display: flex;
+        align-items: center;
+        height: 3rem;
         color: #FFF;
         margin-right: 0.6rem;
         padding: 0.6rem;
@@ -46,6 +54,8 @@ export const Container = styled.div`
     }
 
     button {
+        height: 3rem;
+        color: #FFF;
         padding: 0.6rem;
         border: none;
         border-radius: 4px;
@@ -70,5 +80,10 @@ export const Container = styled.div`
                 font-size: 3rem;
             }
         }
+    }
+
+    .errors {
+        font-size: 0.9rem;
+        color: #E2E2E2;
     }
 `;

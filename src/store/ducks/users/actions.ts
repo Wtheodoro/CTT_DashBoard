@@ -1,4 +1,3 @@
-import { act } from 'react-dom/test-utils'
 import { action } from 'typesafe-actions'
 import { UsersEnumType, UserType } from './types'
 

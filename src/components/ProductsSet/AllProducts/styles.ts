@@ -13,4 +13,17 @@ export const Container = styled.div`
         background: inherit;
         overflow-y: scroll;
     }
+
+    .content {
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #F5679B;
+            outline: none;
+            border-radius: 15px;
+        }
+    }
 `;

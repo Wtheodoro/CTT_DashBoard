@@ -7,7 +7,7 @@ import AddPredefinedProduct from '../AddPredefinedProduct';
 import { Container } from './styles';
 
 const AddProduct = () => {
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
 
 
@@ -29,10 +29,13 @@ const AddProduct = () => {
   return (
     <Container>
       <form onSubmit={handleSubmit(registerProduct)}>
-        <p>Novo produto</p>
-        <input name="title" type="text" placeholder="Título" ref={register({ required:true })}/>
+        <p>Novo produto. Todos os campos são obrigatórios.</p>
+        <input name="title" type="text" placeholder="Nome do produto" ref={register({ required:true })}/>
+
         <input name="description" type="text" placeholder="Descrição" ref={register({ required:true })}/>
+
         <input name="price" type="number" step="0.01" placeholder="Preço" ref={register({ required:true })}/>
+
         <input name="image" type="text" placeholder="Link da imagem" ref={register({ required:true })}/>
         <button>Enviar</button>
       </form>

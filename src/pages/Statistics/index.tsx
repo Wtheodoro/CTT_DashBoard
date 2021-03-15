@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import Counter from '../../components/Counter';
 import Header from '../../components/Header';
 import SideBar from '../../components/SideBar';
@@ -40,6 +41,12 @@ const Statistics = () => {
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+
+      {
+        !tokenStorage &&
+        <Redirect to="/" />
+      }
+      
     </Container>
   )
 }

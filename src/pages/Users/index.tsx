@@ -35,10 +35,16 @@ const Users = () => {
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+
       {
         userRole !== 'admin' &&
         <Redirect to="/home"/>
       }
+      {
+        !tokenStorage &&
+        <Redirect to="/" />
+      }
+      
     </Container>
   );
 }

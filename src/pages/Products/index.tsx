@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import AllProducts from '../../components/ProductsSet/AllProducts';
 import Header from '../../components/Header';
@@ -7,6 +7,7 @@ import { loadGetProductsRequest } from '../../store/ducks/products/actions';
 
 import { Container } from './styles';
 import AddProduct from '../../components/ProductsSet/AddProduct';
+import { Redirect } from 'react-router-dom';
 
 const Products = () => {
   const dispatch = useDispatch()
@@ -32,6 +33,12 @@ const Products = () => {
       </div>
       <img src="images/bg-stars.svg" alt="shiny starts" className="starts"/>
       <img src="images/pattern-hills.svg" alt="Hills" className="hills"/>
+
+      {
+        !tokenStorage &&
+        <Redirect to="/" />
+      }
+      
     </Container>
   )
 }

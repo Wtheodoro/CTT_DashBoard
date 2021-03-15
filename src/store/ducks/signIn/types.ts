@@ -1,7 +1,11 @@
 export enum SignInEnumTypes {
     POST_SIGNIN_REQUEST = '@POST_SIGNIN_REQUEST',
     POST_SIGNIN_SUCCESS = '@POST_SIGNIN_SUCCESS',
-    POST_SIGNIN_FAILURE = '@POST_SIGNIN_FAILURE'
+    POST_SIGNIN_FAILURE = '@POST_SIGNIN_FAILURE',
+
+    SIGNOUT_REQUEST = '@SIGNOUT_REQUEST',
+    SIGNOUT_SUCCESS = '@SIGNOUT_SUCCESS',
+    SIGNOUT_FAILURE = '@SIGNOUT_FAILURE',
 }
 
 export interface LogInitialState {
@@ -36,4 +40,10 @@ export interface DataWithId {
 
 export interface SignInPayload {
     payload: LoggedUser
+}
+
+export interface TokenUserType {
+    token: string
+    name: string
+    role: string
 }

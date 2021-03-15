@@ -17,7 +17,7 @@ useEffect(() => {
 
   return (
     <Container>
-      <div className="content">
+      <div className="content" data-testid="list-products">
         {
           products?.map((i: ProductType) => (
             <>
