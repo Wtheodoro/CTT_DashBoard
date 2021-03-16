@@ -2,7 +2,7 @@
 
 ![GIF](https://github.com/Wtheodoro/CTT_DashBoard/blob/main/public/gif/preview.gif)
 
-###
+### `Git clone`
 First you need to clone this repository.
 
 ### `npm install`
