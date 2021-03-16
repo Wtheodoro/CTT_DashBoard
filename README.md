@@ -7,6 +7,7 @@ First you need to clone this repository.
 
 ### `npm install`
 Second you need to install all dependencies.
+**Make sure you are inside the CTT_DashBoard repository**
 
 ### `npm start`
 Runs the app in the development mode.\
