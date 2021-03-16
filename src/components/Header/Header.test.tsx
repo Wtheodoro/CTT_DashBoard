@@ -4,13 +4,17 @@ import React from 'react'
 
 import Header from './index'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from '../../store'
 
 describe('Header test', () => {
 
     it('Does Header have logout button?', () => {
         render(
             <BrowserRouter>
-                <Header />
+                <Provider store={store}>
+                    <Header />
+                </Provider>
             </BrowserRouter>
         )
 

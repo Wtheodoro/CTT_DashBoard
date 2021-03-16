@@ -3,7 +3,6 @@ import '@testing-library/jest-dom'
 import React from 'react'
 
 import Instructions from './index'
-import { BrowserRouter } from 'react-router-dom'
 
 describe('Instructions test', () => {
 

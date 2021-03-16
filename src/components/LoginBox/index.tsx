@@ -31,15 +31,11 @@ const LoginBox = () => {
         <h1>Login</h1>
          <input type="email" placeholder="E-mail" ref={inputEmail}/>
          <input type="password" placeholder="Senha" ref={inputPassword}/>
-         <button onClick={signIn}>Login</button>
+         <button onClick={signIn} >Login</button>
          {
            errorMessage &&
            <p>E-mail e/ou senha invalidos</p>
          }     
-         {/* {
-           tokenFromGlobal &&
-           <Redirect to="/home" />
-         } */}
          {
            tokenFromStorage &&
            <Redirect to="/home" />
