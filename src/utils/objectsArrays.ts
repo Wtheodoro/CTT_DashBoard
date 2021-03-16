@@ -8,13 +8,13 @@ export const productsArray = [
     {
       title: 'Cachaça do Chefe extra premium 750ml',
 	    price: 'R$ 139.70',
-	    description: "De cor amarelo-palha, possui uma mescla de aromas adocicados, amadeirados, frutados e de especiarias. No paladar, traz um gosto doce. Além disso, causa uma sensação aveludada e licorosa na boca. Retrogosto agradável e forte.",
+	    description: "Do Chefe",
 	    image: "https://cachacarianacional.vteximg.com.br/arquivos/ids/161228-1000-1000/cachaca-do-chefe-extra-premium-750ml-00449_1.jpg?v=637511824989830000"
     },
     {
-      title: 'Pitchula',
+      title: 'Pitchula 220ml',
 	    price: 'R$ 1.29',
-	    description: "Bebida muito famosa nos anos 90 e 2000. A criança que cresceu tomando isso é mais feliz",
+	    description: "Bebida muito famosa nos anos 90 e 2000",
 	    image: "https://cd.shoppub.com.br/beirario/media/cache/36/48/3648df3059bf441b66e55a2f7d864c06.jpg"
     },
     {
@@ -32,19 +32,19 @@ export const productsArray = [
     {
         title: "JACK DANIEL'S Tennesse 1L",
           price: 'R$ 135.99',
-          description: "Jack Daniel's Tennessee Whiskey é destilado e engarrafado na Jack Daniel Distillery, a mais antiga destilaria registrada dos EUA, fundada em 1866. Cada garrafa de Jack Daniel's Tennessee Whiskey vendida ao redor do mundo ainda é produzida aqui em Lynchburg, TN.",
+          description: "Jack Daniel's",
           image: "https://static.paodeacucar.com/img/uploads/1/725/653725.jpg"
     },
     {
         title: 'Bacardi Carta Ouro rum brasileiro',
           price: 'R$ 32.50',
-          description: "Um clássico da Bacardi, a Gold possui sabor suave e coloração âmbar, tendo um aroma de nozes a baunilhas. Em seu ingrediente temos água desmineralizada e destilado alcoólico simples do melaço envelhecido. Destaca-se pelo seu paladar bem equilibrado de frutas tropicais com nuances de especiarias. Graduação alcoólica de 38%.",
+          description: "Bacardí",
           image: "https://statics.angeloni.com.br/super/files/produtos/51411/51411_1_large.jpg"
     },
     {
         title: 'Suco Natural One uva 1,5L',
           price: 'R$ 15.13',
-          description: "A uva é responsável por trazer nutrientes importantes, como as vitaminas do complexo B. Essas vitaminas têm como função metabolizar carboidratos, proteínas e gorduras em nosso organismo. A uva também contém potássio, ferro e fibras. Além disso, existem inúmeras pesquisas que correlacionam a presença natural de polifenóis na uva (resveratrol e antocianinas) com a melhora em doenças cardiovasculares no nosso corpo, além de seu efeito anti-inflamatório e antioxidante (evitando a produção de radicais livres).",
+          description: "Suco de Uva",
           image: "https://naturalone.vteximg.com.br/arquivos/ids/155646/15L-Uva-Ambiente.png?v=637288815647700000"
     },
     
