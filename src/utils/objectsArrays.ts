@@ -19,7 +19,7 @@ export const productsArray = [
     },
     {
       title: 'Vodka Roberto Cavalli 6L',
-	    price: 'R$ 8.399.00',
+	    price: 'R$ 8399.00',
 	    description: "Provavelmente será a vodka mais cara que você verá",
 	    image: "https://images-submarino.b2w.io/produtos/01/00/img/2784639/8/2784639864_1SZ.jpg"
     },
