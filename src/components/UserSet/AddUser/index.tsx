@@ -48,7 +48,7 @@ const AddUser = () => {
 
         <label>
           Editor
-          <input type="radio" name="role" ref={register} value="editor" checked/>
+          <input type="radio" name="role" ref={register} value="editor" defaultChecked/>
         </label>
         <label>
           Admin

@@ -23,7 +23,6 @@ export function* postUsers(headerUser: any) {
     try {
         const response: UserData = yield call(userService.postUser,headerUser.payload.token ,headerUser.payload.user)
         const decryptedResponse: userTokenDecrypted = yield decodeToken(response.data.accessToken)
-        console.log(decryptedResponse)
 
         const user: UserType = {
             id: decryptedResponse.sub,

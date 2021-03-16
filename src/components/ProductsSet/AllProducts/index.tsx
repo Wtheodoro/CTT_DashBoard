@@ -20,9 +20,7 @@ useEffect(() => {
       <div className="content" data-testid="list-products">
         {
           products?.map((i: ProductType) => (
-            <>
               <ProductTrack item={i} key={i.id}/>
-            </>
           ))
         }
       </div>

@@ -19,9 +19,7 @@ const AllUsers = () => {
       <div className="content">
         {
           users?.map((i: UserType) => (
-            <>
               <UserTrack user={i} key={i.id}/>
-            </>
           ))
         }
       </div>

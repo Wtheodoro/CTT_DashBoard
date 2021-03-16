@@ -17,6 +17,7 @@ const Products = () => {
     if (tokenStorage) {
       dispatch(loadGetProductsRequest(tokenStorage))
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

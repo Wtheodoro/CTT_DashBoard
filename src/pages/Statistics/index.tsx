@@ -20,6 +20,7 @@ const Statistics = () => {
       dispatch(loadGetProductsRequest(tokenStorage))
       dispatch(loadGetUsersRequest(tokenStorage))
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   const usersFromReducer: UserType[] = useSelector((state: AllTypesReducer) => state.reducerUsers.users)

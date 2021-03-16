@@ -19,6 +19,7 @@ const Users = () => {
     if (tokenStorage) {
       dispatch(loadGetUsersRequest(tokenStorage))
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   return (
