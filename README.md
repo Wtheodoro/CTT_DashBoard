@@ -13,8 +13,15 @@ Second you need to install all dependencies.
 Runs the app in the development mode.\
 open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**For your first access on the plataorm you'll need a login, be free to use one of those.**
+
+**Role: Admin**
+**E-mail: helen@facebook.com**
+**Password: 123123**
+
+**Role: Editor**
+**E-mail: mauricio@google.com**
+**Password: 123123**
 
 ### `npm test`
 You can also run some tests that i made on this application.
